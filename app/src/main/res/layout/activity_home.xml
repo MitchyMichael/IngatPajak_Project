@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/button"
-                        android:text="PPN"
+                        android:text="PPN & PPnBM"
                         android:textColor="@color/black"
                         app:backgroundTint="@color/green"
                         app:layout_constraintEnd_toEndOf="parent"
