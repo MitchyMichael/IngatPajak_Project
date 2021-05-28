@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".input_pph" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Hitung PPh"
+                android:textColor="@color/green"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="50dp"
+                android:text="Personal"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:text="Status NPWP"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="NPWP"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="Non NPWP"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioGroup4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radioButton9"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="0"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="1"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="2"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="3"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:counterTextColor="@color/green"
+                app:helperTextTextColor="@color/green"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+                app:placeholderTextColor="@color/green"
+                app:prefixTextColor="@color/green"
+                app:suffixTextColor="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bonus, Gratifikasi, Jasa Produksi, dan THR"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white" />/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:counterTextColor="@color/green"
+                app:helperTextTextColor="@color/green"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                app:placeholderTextColor="@color/green"
+                app:prefixTextColor="@color/green"
+                app:suffixTextColor="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pendapatan per bulan"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:counterTextColor="@color/green"
+                app:helperTextTextColor="@color/green"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                app:placeholderTextColor="@color/green"
+                app:prefixTextColor="@color/green"
+                app:suffixTextColor="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tunjangan PPh"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white" />/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="50dp"
+                android:text="Penghasilan"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:counterTextColor="@color/green"
+                app:helperTextTextColor="@color/green"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+                app:placeholderTextColor="@color/green"
+                app:prefixTextColor="@color/green"
+                app:suffixTextColor="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Imbalan lainnya dan sejenisnya"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white" />/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:counterTextColor="@color/green"
+                app:helperTextTextColor="@color/green"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+                app:placeholderTextColor="@color/green"
+                app:prefixTextColor="@color/green"
+                app:suffixTextColor="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Premi Asuransi yang dibayar pemberi kerja"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white" />/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:counterTextColor="@color/green"
+                app:helperTextTextColor="@color/green"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+                app:placeholderTextColor="@color/green"
+                app:prefixTextColor="@color/green"
+                app:suffixTextColor="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Natura dan kenikmatan lainnya"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white" />/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="Status Kawin"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="TK"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="K"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:text="HB"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:counterTextColor="@color/green"
+                app:helperTextTextColor="@color/green"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+                app:placeholderTextColor="@color/green"
+                app:prefixTextColor="@color/green"
+                app:suffixTextColor="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tunjangan lainnya, Uang lembur, dsb."
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white" />/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="Jumlah Tanggungan"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="50dp"
+                android:text="Pengurangan"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:counterTextColor="@color/green"
+                app:helperTextTextColor="@color/green"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:placeholderTextColor="@color/green"
+                app:prefixTextColor="@color/green"
+                app:suffixTextColor="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Iuran pensiun atau Iuran THT/JHT"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white" />/>/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_lanjut_inputPPh"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/button"
+                android:text="Lanjut"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
