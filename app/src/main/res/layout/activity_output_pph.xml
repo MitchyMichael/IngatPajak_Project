@@ -54,7 +54,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/outputPPH_penghasilanBruto"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -80,10 +80,10 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                app:layout_constraintTop_toBottomOf="@+id/outputPPH_penghasilanBruto" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/outputPPH_biayaJabatan"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -100,35 +100,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
             <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="24dp"
-                android:text="Iuran Pensiun"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="32dp"
-                android:background="#272727"
-                android:gravity="center_vertical|end"
-                android:paddingRight="10dp"
-                android:text="Nominal"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -138,10 +109,10 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                app:layout_constraintTop_toBottomOf="@+id/outputPPH_biayaJabatan" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/outputPPH_jumlahPengurang"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -167,10 +138,10 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                app:layout_constraintTop_toBottomOf="@+id/outputPPH_jumlahPengurang" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/outputPPH_penghasilanNeto"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -196,10 +167,10 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                app:layout_constraintTop_toBottomOf="@+id/outputPPH_penghasilanNeto" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/outputPPH_penghasilanNetoSetahun"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -225,10 +196,10 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+                app:layout_constraintTop_toBottomOf="@+id/outputPPH_penghasilanNetoSetahun" />
 
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/outputPPH_ptkp"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -254,10 +225,10 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+                app:layout_constraintTop_toBottomOf="@+id/outputPPH_ptkp" />
 
             <TextView
-                android:id="@+id/textView26"
+                android:id="@+id/outputPPH_pkpSetahun"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -283,10 +254,10 @@
                 android:textColor="@color/green"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+                app:layout_constraintTop_toBottomOf="@+id/outputPPH_pkpSetahun" />
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/outputPPH_pphTerutang"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -314,7 +285,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+                app:layout_constraintTop_toBottomOf="@+id/outputPPH_pphTerutang" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

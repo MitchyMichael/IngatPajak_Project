@@ -66,7 +66,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView4">
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radio_statusNPWP_NPWP"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -74,7 +74,7 @@
                     android:textColor="@color/white" />
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/radio_statusNPWP_nonNPWP"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -93,7 +93,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
-                    android:id="@+id/radioButton9"
+                    android:id="@+id/radio_jumlahTanggungan_0"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -101,7 +101,7 @@
                     android:textColor="@color/white" />
 
                 <RadioButton
-                    android:id="@+id/radioButton8"
+                    android:id="@+id/radio_jumlahTanggungan_1"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -109,7 +109,7 @@
                     android:textColor="@color/white" />
 
                 <RadioButton
-                    android:id="@+id/radioButton7"
+                    android:id="@+id/radio_jumlahTanggungan_2"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -117,7 +117,7 @@
                     android:textColor="@color/white" />
 
                 <RadioButton
-                    android:id="@+id/radioButton6"
+                    android:id="@+id/radio_jumlahTanggungan_3"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -126,21 +126,21 @@
             </RadioGroup>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout7"
+                android:id="@+id/inputPPH_bonus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
                 android:textColorHint="@color/white"
-                app:boxBackgroundColor="@color/black"
+                app:boxBackgroundColor="#272727"
                 app:boxStrokeColor="@color/white"
                 app:counterTextColor="@color/green"
                 app:helperTextTextColor="@color/green"
                 app:hintTextColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+                app:layout_constraintTop_toBottomOf="@+id/inputPPH_natura"
                 app:placeholderTextColor="@color/green"
                 app:errorEnabled="true"
                 app:prefixTextColor="@color/green"
@@ -159,14 +159,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
+                android:id="@+id/inputPPH_pendapatanPerBulan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
                 android:textColorHint="@color/white"
-                app:boxBackgroundColor="@color/black"
+                app:boxBackgroundColor="#272727"
                 app:boxStrokeColor="@color/white"
                 app:counterTextColor="@color/green"
                 app:errorEnabled="true"
@@ -192,14 +192,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout2"
+                android:id="@+id/inputPPH_tunjanganPPH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
                 android:textColorHint="@color/white"
-                app:boxBackgroundColor="@color/black"
+                app:boxBackgroundColor="#272727"
                 app:boxStrokeColor="@color/white"
                 app:counterTextColor="@color/green"
                 app:errorEnabled="true"
@@ -207,7 +207,7 @@
                 app:hintTextColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/inputPPH_pendapatanPerBulan"
                 app:placeholderTextColor="@color/green"
                 app:prefixTextColor="@color/green"
                 app:suffixTextColor="@color/green">
@@ -237,7 +237,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout4"
+                android:id="@+id/inputPPH_imbalanLainnya"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -245,14 +245,14 @@
                 android:layout_marginEnd="32dp"
                 android:textColorHint="@color/white"
                 app:errorEnabled="true"
-                app:boxBackgroundColor="@color/black"
+                app:boxBackgroundColor="#272727"
                 app:boxStrokeColor="@color/white"
                 app:counterTextColor="@color/green"
                 app:helperTextTextColor="@color/green"
                 app:hintTextColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/inputPPH_tunjanganLainnya"
                 app:placeholderTextColor="@color/green"
                 app:prefixTextColor="@color/green"
                 app:suffixTextColor="@color/green">
@@ -270,7 +270,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout5"
+                android:id="@+id/inputPPH_premiAsuransi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -278,14 +278,14 @@
                 android:layout_marginEnd="32dp"
                 app:errorEnabled="true"
                 android:textColorHint="@color/white"
-                app:boxBackgroundColor="@color/black"
+                app:boxBackgroundColor="#272727"
                 app:boxStrokeColor="@color/white"
                 app:counterTextColor="@color/green"
                 app:helperTextTextColor="@color/green"
                 app:hintTextColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/inputPPH_imbalanLainnya"
                 app:placeholderTextColor="@color/green"
                 app:prefixTextColor="@color/green"
                 app:suffixTextColor="@color/green">
@@ -303,7 +303,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout6"
+                android:id="@+id/inputPPH_natura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -311,14 +311,14 @@
                 android:layout_marginEnd="32dp"
                 android:textColorHint="@color/white"
                 app:errorEnabled="true"
-                app:boxBackgroundColor="@color/black"
+                app:boxBackgroundColor="#272727"
                 app:boxStrokeColor="@color/white"
                 app:counterTextColor="@color/green"
                 app:helperTextTextColor="@color/green"
                 app:hintTextColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/inputPPH_premiAsuransi"
                 app:placeholderTextColor="@color/green"
                 app:prefixTextColor="@color/green"
                 app:suffixTextColor="@color/green">
@@ -358,7 +358,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView5">
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
+                    android:id="@+id/radio_statusKawin_TK"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -366,7 +366,7 @@
                     android:textColor="@color/white" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/radio_statusKawin_K"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -374,7 +374,7 @@
                     android:textColor="@color/white" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/radio_statusKawin_HB"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/green"
@@ -383,7 +383,7 @@
             </RadioGroup>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout3"
+                android:id="@+id/inputPPH_tunjanganLainnya"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -391,14 +391,14 @@
                 android:layout_marginEnd="32dp"
                 android:textColorHint="@color/white"
                 app:errorEnabled="true"
-                app:boxBackgroundColor="@color/black"
+                app:boxBackgroundColor="#272727"
                 app:boxStrokeColor="@color/white"
                 app:counterTextColor="@color/green"
                 app:helperTextTextColor="@color/green"
                 app:hintTextColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/inputPPH_tunjanganPPH"
                 app:placeholderTextColor="@color/green"
                 app:prefixTextColor="@color/green"
                 app:suffixTextColor="@color/green">
@@ -437,10 +437,10 @@
                 android:textColor="@color/green"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+                app:layout_constraintTop_toBottomOf="@+id/inputPPH_bonus" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout8"
+                android:id="@+id/inputPPH_iuranPensiun"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -448,7 +448,7 @@
                 android:layout_marginEnd="32dp"
                 android:textColorHint="@color/white"
                 app:errorEnabled="true"
-                app:boxBackgroundColor="@color/black"
+                app:boxBackgroundColor="#272727"
                 app:boxStrokeColor="@color/white"
                 app:counterTextColor="@color/green"
                 app:helperTextTextColor="@color/green"
@@ -484,7 +484,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
+                app:layout_constraintTop_toBottomOf="@+id/inputPPH_iuranPensiun" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
