@@ -24,6 +24,9 @@ public class input_pph extends AppCompatActivity {
     private int pendapatanPerBulan, tunjanganPPh, tunjanganLainnya, imbalanLainnya, premiAsuransi,
             natura, bonus, iuranPensiun;
 
+    private int penghasilanBruto, biayaJabatan, totalPengeluaran, penghasilanNetoSebulan,
+            penghasilanNetoSetahun, totalPTKP, PKPsetahun, jumlahPajak, pajakTerutang;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +42,42 @@ public class input_pph extends AppCompatActivity {
         inputPengurangan();
 
         //hitung
+        hitung();
 
         buttonContinue();
 
+    }
+
+    private void hitung() {
+        penghasilanBruto = pendapatanPerBulan + tunjanganPPh + tunjanganLainnya +
+                imbalanLainnya + premiAsuransi + natura + bonus;
+        biayaJabatan = penghasilanBruto * 5 / 100;
+        totalPengeluaran = biayaJabatan + iuranPensiun;
+        penghasilanNetoSebulan = penghasilanBruto - totalPengeluaran;
+        penghasilanNetoSetahun = penghasilanNetoSebulan * 12;
+        totalPTKP = statusKawin + jumlahTanggungan;
+        PKPsetahun = penghasilanNetoSetahun - totalPTKP;
+
+        if (PKPsetahun <= 50000000){
+            jumlahPajak = PKPsetahun * 5 / 100;
+        } else if (PKPsetahun <= 250000000){
+            int temp1 = 50000000 * 5 / 100;
+            int temp2 = (PKPsetahun - 50000000) * 15 / 100;
+            jumlahPajak = temp1 + temp2;
+        } else if (PKPsetahun <= 500000000){
+            int temp1 = 50000000 * 5 / 100;
+            int temp2 = 200000000 * 15 / 100;
+            int temp3 = (PKPsetahun - 250000000) * 25 / 100;
+            jumlahPajak = temp1 + temp2 + temp3;
+        } else if (PKPsetahun > 500000000){
+            int temp1 = 50000000 * 5 / 100;
+            int temp2 = 200000000 * 15 / 100;
+            int temp3 = 250000000 * 25 / 100;
+            int temp4 = (PKPsetahun - 500000000) * 30 / 100;
+            jumlahPajak = temp1 + temp2 + temp3 + temp4;
+        }
+
+        pajakTerutang = jumlahPajak * npwp / 100;
 
     }
 
