@@ -286,13 +286,17 @@ public class input_pph extends AppCompatActivity {
         totalPTKP = statusKawin + jumlahTanggungan;
         PKPsetahun = penghasilanNetoSetahun - totalPTKP;
 
-        if (PKPsetahun <= 50000000){
+        if (PKPsetahun < 0){
+            PKPsetahun = 0;
+        }
+
+        if (PKPsetahun <= 50000000 && PKPsetahun > 0){
             jumlahPajak = PKPsetahun * 5 / 100;
-        } else if (PKPsetahun <= 250000000){
+        } else if (PKPsetahun <= 250000000 && PKPsetahun > 0){
             int temp1 = 50000000 * 5 / 100;
             int temp2 = (PKPsetahun - 50000000) * 15 / 100;
             jumlahPajak = temp1 + temp2;
-        } else if (PKPsetahun <= 500000000){
+        } else if (PKPsetahun <= 500000000 && PKPsetahun > 0){
             int temp1 = 50000000 * 5 / 100;
             int temp2 = 200000000 * 15 / 100;
             int temp3 = (PKPsetahun - 250000000) * 25 / 100;
@@ -406,16 +410,28 @@ public class input_pph extends AppCompatActivity {
                         validateImbalanLainnya && validatePremiAsuransi && validateNatura && validateBonus &&
                         validateIuranPensiun){
                     hitung();
-                    Intent intent = new Intent(getBaseContext(), output_pph.class);
 
-                    intent.putExtra("penghasilanBruto", penghasilanBruto);
-                    intent.putExtra("biayaJabatan", biayaJabatan);
-                    intent.putExtra("totalPengeluaran", totalPengeluaran);
-                    intent.putExtra("penghasilanNetoSebulan", penghasilanNetoSebulan);
-                    intent.putExtra("penghasilanNetoSetahun", penghasilanNetoSetahun);
-                    intent.putExtra("totalPTKP", totalPTKP);
-                    intent.putExtra("PKPsetahun", PKPsetahun);
-                    intent.putExtra("pajakTerutang", pajakTerutang);
+                    String penghasilanBruto_string, biayaJabatan_string, totalPengeluaran_string, penghasilanNetoSebulan_string,
+                            penghasilanNetoSetahun_string, totalPTKP_string, PKPsetahun_string, pajakTerutang_string;
+
+                    penghasilanBruto_string = String.valueOf(penghasilanBruto);
+                    biayaJabatan_string = String.valueOf(biayaJabatan);
+                    totalPengeluaran_string = String.valueOf(totalPengeluaran);
+                    penghasilanNetoSebulan_string = String.valueOf(penghasilanNetoSebulan);
+                    penghasilanNetoSetahun_string = String.valueOf(penghasilanNetoSetahun);
+                    totalPTKP_string = String.valueOf(totalPTKP);
+                    PKPsetahun_string = String.valueOf(PKPsetahun);
+                    pajakTerutang_string = String.valueOf(pajakTerutang);
+
+                    Intent intent = new Intent(getBaseContext(), output_pph.class);
+                    intent.putExtra("penghasilanBruto", penghasilanBruto_string);
+                    intent.putExtra("biayaJabatan", biayaJabatan_string);
+                    intent.putExtra("totalPengeluaran", totalPengeluaran_string);
+                    intent.putExtra("penghasilanNetoSebulan", penghasilanNetoSebulan_string);
+                    intent.putExtra("penghasilanNetoSetahun", penghasilanNetoSetahun_string);
+                    intent.putExtra("totalPTKP", totalPTKP_string);
+                    intent.putExtra("PKPsetahun", PKPsetahun_string);
+                    intent.putExtra("pajakTerutang", pajakTerutang_string);
 
                     startActivity(intent);
                     finish();
