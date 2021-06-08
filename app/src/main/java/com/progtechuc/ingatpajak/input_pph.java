@@ -399,9 +399,6 @@ public class input_pph extends AppCompatActivity {
 
     private void buttonContinue() {
 
-
-
-
         button_lanjut_inputPPh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -412,13 +409,13 @@ public class input_pph extends AppCompatActivity {
                     Intent intent = new Intent(getBaseContext(), output_pph.class);
 
                     intent.putExtra("penghasilanBruto", penghasilanBruto);
-                    intent.putExtra("penghasilanBruto", biayaJabatan);
-                    intent.putExtra("penghasilanBruto", totalPengeluaran);
-                    intent.putExtra("penghasilanBruto", penghasilanNetoSebulan);
-                    intent.putExtra("penghasilanBruto", penghasilanNetoSetahun);
-                    intent.putExtra("penghasilanBruto", totalPTKP);
-                    intent.putExtra("penghasilanBruto", PKPsetahun);
-                    intent.putExtra("penghasilanBruto", pajakTerutang);
+                    intent.putExtra("biayaJabatan", biayaJabatan);
+                    intent.putExtra("totalPengeluaran", totalPengeluaran);
+                    intent.putExtra("penghasilanNetoSebulan", penghasilanNetoSebulan);
+                    intent.putExtra("penghasilanNetoSetahun", penghasilanNetoSetahun);
+                    intent.putExtra("totalPTKP", totalPTKP);
+                    intent.putExtra("PKPsetahun", PKPsetahun);
+                    intent.putExtra("pajakTerutang", pajakTerutang);
 
                     startActivity(intent);
                     finish();
