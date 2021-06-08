@@ -4,12 +4,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/logoappjpg"
+        android:label= "Ingat Pajak"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IngatPajak">
-        <activity android:name=".LoadingDialog"></activity>
+
         <activity android:name=".HasilPPnBMActivity" />
         <activity android:name=".PPN_BMActivity" />
         <activity android:name=".hasilPBBActivity" />
