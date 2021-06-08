@@ -32,6 +32,22 @@ public class HomeActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
+
+        button_PBB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getBaseContext(), PbbActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button_PPN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getBaseContext(), PPN_BMActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initView() {

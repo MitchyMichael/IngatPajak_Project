@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/textView_Pajak_PBB"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
@@ -46,7 +46,7 @@
         android:paddingRight="10dp"
         android:text="Nominal"
         android:textAlignment="viewEnd"
-        android:textColor="#FFFDFD"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView16"
         app:layout_constraintHorizontal_bias="0.0"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
-        android:id="@+id/button_lanjut_inputPPh3"
+        android:id="@+id/button_balikmenu"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
@@ -65,5 +65,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_Pajak_PBB" />
 </androidx.constraintlayout.widget.ConstraintLayout>

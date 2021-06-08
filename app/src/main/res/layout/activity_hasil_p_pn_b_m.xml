@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/textView_PPN_Hasil"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
@@ -46,7 +46,7 @@
         android:paddingRight="10dp"
         android:text="Nominal"
         android:textAlignment="viewEnd"
-        android:textColor="#FFFDFD"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView22"
         app:layout_constraintHorizontal_bias="0.0"
@@ -61,13 +61,13 @@
         android:text="PPnBM Terutang"
         android:textColor="@color/green"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView29"
+        app:layout_constraintEnd_toEndOf="@+id/textView_PPN_Hasil"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+        app:layout_constraintStart_toStartOf="@+id/textView_PPN_Hasil"
+        app:layout_constraintTop_toBottomOf="@+id/textView_PPN_Hasil" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/textView_PPnBM_Hasil"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
@@ -77,7 +77,7 @@
         android:paddingRight="10dp"
         android:text="Nominal"
         android:textAlignment="viewEnd"
-        android:textColor="#FFFDFD"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView30"
         app:layout_constraintHorizontal_bias="0.0"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
     <Button
-        android:id="@+id/button_lanjut_inputPPh5"
+        android:id="@+id/button_Home"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
@@ -96,5 +96,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_PPnBM_Hasil" />
 </androidx.constraintlayout.widget.ConstraintLayout>
