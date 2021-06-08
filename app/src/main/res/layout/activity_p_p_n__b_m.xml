@@ -51,6 +51,7 @@
             android:layout_width="335dp"
             android:layout_height="match_parent"
             android:hint="Nilai Barang"
+            android:inputType="number"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -87,6 +88,7 @@
             android:layout_width="335dp"
             android:layout_height="match_parent"
             android:hint="Tarif PPnBM (%)"
+            android:inputType="number"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />

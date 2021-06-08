@@ -52,6 +52,7 @@
             android:layout_height="match_parent"
             android:hint="Luas Bangunan (m2)"
             android:textAlignment="textEnd"
+            android:inputType="number"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -73,6 +74,7 @@
             android:layout_width="335dp"
             android:layout_height="match_parent"
             android:hint="Luas Tanah (m2)"
+            android:inputType="number"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -95,6 +97,7 @@
             android:layout_width="335dp"
             android:layout_height="match_parent"
             android:hint="Harga Bangunan (per meter2)"
+            android:inputType="number"
             android:textAlignment="textEnd"
             android:textColor="@color/white"
             android:textColorHint="#FFFFFF" />
@@ -115,6 +118,7 @@
             android:layout_width="335dp"
             android:layout_height="match_parent"
             android:hint="Harga Tanah (per meter2)"
+            android:inputType="number"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
             android:textColorHint="#DDD5D5" />
