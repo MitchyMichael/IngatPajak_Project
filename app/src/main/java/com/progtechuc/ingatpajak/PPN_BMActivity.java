@@ -52,6 +52,10 @@ public class PPN_BMActivity extends AppCompatActivity {
 
         hasil = (persentase * impor) / 100;
 
+        if (hasil <= 0){
+            hasil = 0;
+        }
+
         return hasil;
     }
 
@@ -63,6 +67,11 @@ public class PPN_BMActivity extends AppCompatActivity {
         persentase = Integer.parseInt(textInput_PPNBM.getEditText().getText().toString().trim());
 
         hasil = impor / 10;
+
+        if (hasil <= 0){
+            hasil = 0;
+        }
+
 
         return hasil;
     }

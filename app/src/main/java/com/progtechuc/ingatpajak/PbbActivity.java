@@ -65,6 +65,10 @@ public class PbbActivity extends AppCompatActivity {
 
         PBB = NJKP / 200;
 
+        if (PBB <= 0){
+            PBB = 0;
+        }
+
         return PBB;
     }
 
