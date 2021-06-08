@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -21,11 +24,17 @@ public class input_pph extends AppCompatActivity {
     private Button button_lanjut_inputPPh;
     private int jumlahTanggungan, statusKawin, npwp;
 
-    private int pendapatanPerBulan, tunjanganPPh, tunjanganLainnya, imbalanLainnya, premiAsuransi,
+    private String pendapatanPerBulan, tunjanganPPh, tunjanganLainnya, imbalanLainnya, premiAsuransi,
             natura, bonus, iuranPensiun;
+
+    private int pendapatanPerBulan_int, tunjanganPPh_int, tunjanganLainnya_int, imbalanLainnya_int, premiAsuransi_int,
+            natura_int, bonus_int, iuranPensiun_int;
 
     private int penghasilanBruto, biayaJabatan, totalPengeluaran, penghasilanNetoSebulan,
             penghasilanNetoSetahun, totalPTKP, PKPsetahun, jumlahPajak, pajakTerutang;
+
+    private boolean validatePendapatanPerBulan, validateTunjanganPPH, validateTunjanganLainnya,
+            validateImbalanLainnya, validatePremiAsuransi, validateNatura, validateBonus, validateIuranPensiun;
 
 
     @Override
@@ -40,19 +49,238 @@ public class input_pph extends AppCompatActivity {
         inputJumlahTanggungan();
         inputPenghasilan();
         inputPengurangan();
+        inputCek();
 
-        //hitung
-        hitung();
-
+        //button
         buttonContinue();
 
     }
 
+    private void inputCek() {
+        inputPPH_pendapatanPerBulan.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String pendapatanPerBulan_cek = inputPPH_pendapatanPerBulan.getEditText().
+                        getText().toString().trim();
+
+                if (pendapatanPerBulan_cek.isEmpty()){
+                    inputPPH_pendapatanPerBulan.setError("Please fill this column!");
+                    validatePendapatanPerBulan = false;
+                } else {
+                    inputPPH_pendapatanPerBulan.setError("");
+                    validatePendapatanPerBulan = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputPPH_tunjanganPPH.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String tunjanganPPH_cek = inputPPH_tunjanganPPH.getEditText().
+                        getText().toString().trim();
+
+                if (tunjanganPPH_cek.isEmpty()){
+                    inputPPH_tunjanganPPH.setError("Please fill this column!");
+                    validateTunjanganPPH = false;
+                } else {
+                    inputPPH_tunjanganPPH.setError("");
+                    validateTunjanganPPH = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputPPH_tunjanganLainnya.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String tunjanganLainnya_cek = inputPPH_tunjanganLainnya.getEditText().
+                        getText().toString().trim();
+
+                if (tunjanganLainnya_cek.isEmpty()){
+                    inputPPH_tunjanganLainnya.setError("Please fill this column!");
+                    validateTunjanganLainnya = false;
+                } else {
+                    inputPPH_tunjanganLainnya.setError("");
+                    validateTunjanganLainnya = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputPPH_imbalanLainnya.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String imbalanLainnya_cek = inputPPH_imbalanLainnya.getEditText().
+                        getText().toString().trim();
+
+                if (imbalanLainnya_cek.isEmpty()){
+                    inputPPH_imbalanLainnya.setError("Please fill this column!");
+                    validateImbalanLainnya = false;
+                } else {
+                    inputPPH_imbalanLainnya.setError("");
+                    validateImbalanLainnya = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputPPH_premiAsuransi.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String premiAsuransi_cek = inputPPH_premiAsuransi.getEditText().
+                        getText().toString().trim();
+
+                if (premiAsuransi_cek.isEmpty()){
+                    inputPPH_premiAsuransi.setError("Please fill this column!");
+                    validatePremiAsuransi = false;
+                } else {
+                    inputPPH_premiAsuransi.setError("");
+                    validatePremiAsuransi = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputPPH_natura.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String natura_cek = inputPPH_natura.getEditText().
+                        getText().toString().trim();
+
+                if (natura_cek.isEmpty()){
+                    inputPPH_natura.setError("Please fill this column!");
+                    validateNatura = false;
+                } else {
+                    inputPPH_natura.setError("");
+                    validateNatura = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputPPH_bonus.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String bonus_cek = inputPPH_bonus.getEditText().
+                        getText().toString().trim();
+
+                if (bonus_cek.isEmpty()){
+                    inputPPH_bonus.setError("Please fill this column!");
+                    validateBonus = false;
+                } else {
+                    inputPPH_bonus.setError("");
+                    validateBonus = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputPPH_iuranPensiun.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String iuranPensiun_cek = inputPPH_iuranPensiun.getEditText().
+                        getText().toString().trim();
+
+                if (iuranPensiun_cek.isEmpty()){
+                    inputPPH_iuranPensiun.setError("Please fill this column!");
+                    validateIuranPensiun = false;
+                } else {
+                    inputPPH_iuranPensiun.setError("");
+                    validateIuranPensiun = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+    }
+
     private void hitung() {
-        penghasilanBruto = pendapatanPerBulan + tunjanganPPh + tunjanganLainnya +
-                imbalanLainnya + premiAsuransi + natura + bonus;
+
+        pendapatanPerBulan_int = Integer.parseInt(inputPPH_pendapatanPerBulan.getEditText().getText().toString().trim());
+        tunjanganPPh_int = Integer.parseInt(inputPPH_tunjanganPPH.getEditText().getText().toString().trim());
+        tunjanganLainnya_int = Integer.parseInt(inputPPH_tunjanganLainnya.getEditText().getText().toString().trim());
+        imbalanLainnya_int = Integer.parseInt(inputPPH_imbalanLainnya.getEditText().getText().toString().trim());
+        premiAsuransi_int = Integer.parseInt(inputPPH_premiAsuransi.getEditText().getText().toString().trim());
+        natura_int = Integer.parseInt(inputPPH_natura.getEditText().getText().toString().trim());
+        bonus_int = Integer.parseInt(inputPPH_bonus.getEditText().getText().toString().trim());
+        iuranPensiun_int = Integer.parseInt(inputPPH_iuranPensiun.getEditText().getText().toString().trim());
+
+        penghasilanBruto = pendapatanPerBulan_int + tunjanganPPh_int + tunjanganLainnya_int +
+                imbalanLainnya_int + premiAsuransi_int + natura_int + bonus_int;
         biayaJabatan = penghasilanBruto * 5 / 100;
-        totalPengeluaran = biayaJabatan + iuranPensiun;
+        totalPengeluaran = biayaJabatan + iuranPensiun_int;
         penghasilanNetoSebulan = penghasilanBruto - totalPengeluaran;
         penghasilanNetoSetahun = penghasilanNetoSebulan * 12;
         totalPTKP = statusKawin + jumlahTanggungan;
@@ -82,25 +310,17 @@ public class input_pph extends AppCompatActivity {
     }
 
     private void inputPengurangan() {
-        iuranPensiun = Integer.valueOf(inputPPH_iuranPensiun.getEditText().
-                getText().toString().trim());
+        iuranPensiun = inputPPH_iuranPensiun.getEditText().getText().toString().trim();
     }
 
     private void inputPenghasilan() {
-        pendapatanPerBulan = Integer.valueOf(inputPPH_pendapatanPerBulan.getEditText().
-                getText().toString().trim());
-        tunjanganPPh = Integer.valueOf(inputPPH_tunjanganPPH.getEditText().
-                getText().toString().trim());
-        tunjanganLainnya = Integer.valueOf(inputPPH_tunjanganLainnya.getEditText().
-                getText().toString().trim());
-        imbalanLainnya = Integer.valueOf(inputPPH_imbalanLainnya.getEditText().
-                getText().toString().trim());
-        premiAsuransi = Integer.valueOf(inputPPH_premiAsuransi.getEditText().
-                getText().toString().trim());
-        natura = Integer.valueOf(inputPPH_natura.getEditText().
-                getText().toString().trim());
-        bonus = Integer.valueOf(inputPPH_bonus.getEditText().
-                getText().toString().trim());
+        pendapatanPerBulan = inputPPH_pendapatanPerBulan.getEditText().getText().toString().trim();
+        tunjanganPPh = inputPPH_tunjanganPPH.getEditText().getText().toString().trim();
+        tunjanganLainnya = inputPPH_tunjanganLainnya.getEditText().getText().toString().trim();
+        imbalanLainnya = inputPPH_imbalanLainnya.getEditText().getText().toString().trim();
+        premiAsuransi = inputPPH_premiAsuransi.getEditText().getText().toString().trim();
+        natura = inputPPH_natura.getEditText().getText().toString().trim();
+        bonus = inputPPH_bonus.getEditText().getText().toString().trim();
     }
 
     private void inputJumlahTanggungan() {
@@ -177,14 +397,49 @@ public class input_pph extends AppCompatActivity {
         });
     }
 
-
     private void buttonContinue() {
+
+
+
+
         button_lanjut_inputPPh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), output_pph.class);
-                startActivity(intent);
-                finish();
+                if(validatePendapatanPerBulan && validateTunjanganPPH && validateTunjanganLainnya &&
+                        validateImbalanLainnya && validatePremiAsuransi && validateNatura && validateBonus &&
+                        validateIuranPensiun){
+                    hitung();
+                    Intent intent = new Intent(getBaseContext(), output_pph.class);
+
+                    intent.putExtra("penghasilanBruto", penghasilanBruto);
+                    intent.putExtra("penghasilanBruto", biayaJabatan);
+                    intent.putExtra("penghasilanBruto", totalPengeluaran);
+                    intent.putExtra("penghasilanBruto", penghasilanNetoSebulan);
+                    intent.putExtra("penghasilanBruto", penghasilanNetoSetahun);
+                    intent.putExtra("penghasilanBruto", totalPTKP);
+                    intent.putExtra("penghasilanBruto", PKPsetahun);
+                    intent.putExtra("penghasilanBruto", pajakTerutang);
+
+                    startActivity(intent);
+                    finish();
+
+                } else {
+
+                    inputPPH_pendapatanPerBulan.setError("Please fill this column!");
+                    inputPPH_tunjanganPPH.setError("Please fill this column!");
+                    inputPPH_tunjanganLainnya.setError("Please fill this column!");
+                    inputPPH_imbalanLainnya.setError("Please fill this column!");
+                    inputPPH_premiAsuransi.setError("Please fill this column!");
+                    inputPPH_natura.setError("Please fill this column!");
+                    inputPPH_bonus.setError("Please fill this column!");
+                    inputPPH_iuranPensiun.setError("Please fill this column!");
+
+                    Toast.makeText(getApplicationContext(), "Please fill all the column above!",
+                            Toast.LENGTH_SHORT).show();
+
+                }
+
+
             }
         });
     }
@@ -209,6 +464,16 @@ public class input_pph extends AppCompatActivity {
         inputPPH_natura = findViewById(R.id.inputPPH_natura);
         inputPPH_bonus = findViewById(R.id.inputPPH_bonus);
         inputPPH_iuranPensiun = findViewById(R.id.inputPPH_iuranPensiun);
+
+        validatePendapatanPerBulan = false;
+        validateTunjanganPPH = false;
+        validateTunjanganLainnya = false;
+        validateImbalanLainnya = false;
+        validatePremiAsuransi = false;
+        validateNatura = false;
+        validateBonus = false;
+        validateIuranPensiun = false;
+
 
 
     }
