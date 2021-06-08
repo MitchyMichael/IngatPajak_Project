@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IngatPajak">
-        <activity android:name=".HasilPPnBMActivity"></activity>
+        <activity android:name=".LoadingDialog"></activity>
+        <activity android:name=".HasilPPnBMActivity" />
         <activity android:name=".PPN_BMActivity" />
         <activity android:name=".hasilPBBActivity" />
         <activity android:name=".PbbActivity" />

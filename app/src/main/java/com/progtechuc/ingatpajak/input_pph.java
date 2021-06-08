@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -35,6 +36,7 @@ public class input_pph extends AppCompatActivity {
 
     private boolean validatePendapatanPerBulan, validateTunjanganPPH, validateTunjanganLainnya,
             validateImbalanLainnya, validatePremiAsuransi, validateNatura, validateBonus, validateIuranPensiun;
+
 
 
     @Override
@@ -402,10 +404,11 @@ public class input_pph extends AppCompatActivity {
     }
 
     private void buttonContinue() {
-
+        LoadingDialog loadingDialog = new LoadingDialog(input_pph.this);
         button_lanjut_inputPPh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(validatePendapatanPerBulan && validateTunjanganPPH && validateTunjanganLainnya &&
                         validateImbalanLainnya && validatePremiAsuransi && validateNatura && validateBonus &&
                         validateIuranPensiun){
@@ -433,8 +436,21 @@ public class input_pph extends AppCompatActivity {
                     intent.putExtra("PKPsetahun", PKPsetahun_string);
                     intent.putExtra("pajakTerutang", pajakTerutang_string);
 
-                    startActivity(intent);
-                    finish();
+                    loadingDialog.startLoadingDialog();
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            loadingDialog.dismissDialog();
+                            startActivity(intent);
+                            finish();
+                        }
+                    }, 3000);
+
+
+
+
+
 
                 } else {
 
@@ -485,6 +501,7 @@ public class input_pph extends AppCompatActivity {
         validateNatura = false;
         validateBonus = false;
         validateIuranPensiun = false;
+
 
 
 
