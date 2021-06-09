@@ -32,7 +32,9 @@ public class input_pph extends AppCompatActivity {
             natura_int, bonus_int, iuranPensiun_int;
 
     private int penghasilanBruto, biayaJabatan, totalPengeluaran, penghasilanNetoSebulan,
-            penghasilanNetoSetahun, totalPTKP, PKPsetahun, jumlahPajak, pajakTerutang;
+            penghasilanNetoSetahun, totalPTKP, PKPsetahun;
+
+    private long jumlahPajak, pajakTerutang;
 
     private boolean validatePendapatanPerBulan, validateTunjanganPPH, validateTunjanganLainnya,
             validateImbalanLainnya, validatePremiAsuransi, validateNatura, validateBonus, validateIuranPensiun;
@@ -292,26 +294,26 @@ public class input_pph extends AppCompatActivity {
             PKPsetahun = 0;
         }
 
+        int temp1 = 2500000;
+        int temp2 = 30000000;
+        int temp3 = 62500000;
+
         if (PKPsetahun <= 50000000 && PKPsetahun > 0){
-            jumlahPajak = PKPsetahun * 5 / 100;
-        } else if (PKPsetahun <= 250000000 && PKPsetahun > 0){
-            int temp1 = 50000000 * 5 / 100;
-            int temp2 = (PKPsetahun - 50000000) * 15 / 100;
-            jumlahPajak = temp1 + temp2;
-        } else if (PKPsetahun <= 500000000 && PKPsetahun > 0){
-            int temp1 = 50000000 * 5 / 100;
-            int temp2 = 200000000 * 15 / 100;
-            int temp3 = (PKPsetahun - 250000000) * 25 / 100;
-            jumlahPajak = temp1 + temp2 + temp3;
+            jumlahPajak = 1;
+        } else if (PKPsetahun <= 250000000 && PKPsetahun > 50000000){
+            int hasil1 = ((PKPsetahun - 50000000) * 15) / 100;
+            jumlahPajak = 2;
+        } else if (PKPsetahun <= 500000000 && PKPsetahun > 250000000){
+            long a = PKPsetahun - 250000000;
+            long b = a * 25;
+            long c = b / 100;
+            jumlahPajak = c ;
         } else if (PKPsetahun > 500000000){
-            int temp1 = 50000000 * 5 / 100;
-            int temp2 = 200000000 * 15 / 100;
-            int temp3 = 250000000 * 25 / 100;
-            int temp4 = (PKPsetahun - 500000000) * 30 / 100;
-            jumlahPajak = temp1 + temp2 + temp3 + temp4;
+            int temp4 = ((PKPsetahun - 500000000) * 30) / 100;
+            jumlahPajak = 4;
         }
 
-        pajakTerutang = jumlahPajak * npwp / 100;
+        pajakTerutang = jumlahPajak;
 
     }
 
