@@ -294,26 +294,33 @@ public class input_pph extends AppCompatActivity {
             PKPsetahun = 0;
         }
 
-        int temp1 = 2500000;
-        int temp2 = 30000000;
-        int temp3 = 62500000;
+        long temp1 = 2500000;
+        long temp2 = 30000000;
+        long temp3 = 62500000;
 
         if (PKPsetahun <= 50000000 && PKPsetahun > 0){
-            jumlahPajak = 1;
+            long a = PKPsetahun;
+            long b = a * 5;
+            long c = b / 100;
+            jumlahPajak = c ;
         } else if (PKPsetahun <= 250000000 && PKPsetahun > 50000000){
-            int hasil1 = ((PKPsetahun - 50000000) * 15) / 100;
-            jumlahPajak = 2;
+            long a = PKPsetahun - 50000000;
+            long b = a * 15;
+            long c = b / 100;
+            jumlahPajak = temp1 + c;
         } else if (PKPsetahun <= 500000000 && PKPsetahun > 250000000){
             long a = PKPsetahun - 250000000;
             long b = a * 25;
             long c = b / 100;
-            jumlahPajak = c ;
+            jumlahPajak = temp1 + temp2 + c;
         } else if (PKPsetahun > 500000000){
-            int temp4 = ((PKPsetahun - 500000000) * 30) / 100;
-            jumlahPajak = 4;
+            long a = PKPsetahun - 500000000;
+            long b = a * 30;
+            long c = b / 100;
+            jumlahPajak = temp1 + temp2 + temp3 + c;
         }
 
-        pajakTerutang = jumlahPajak;
+        pajakTerutang = jumlahPajak * npwp / 100;
 
     }
 
